@@ -23,7 +23,6 @@ CTF, and the source code is available on GitHub.
 - [Round 6](rounds/6/README.md) (07/22/2024 - 08/31/2024)
 
 
-
 ## License
 
 [CyberStudents CTF Archive](https://github.com/cyberstudentsacademy/csd-ctf/tree/main) © 2024 by
