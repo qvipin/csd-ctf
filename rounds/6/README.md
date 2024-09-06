@@ -1,4 +1,4 @@
-# Round 5
+# Round 6
 
 This round featured 12 challenges (excluding the Sanity Check) lasting from 07/22/2024 to 08/31/2024.
 
