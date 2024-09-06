@@ -19,10 +19,12 @@ I don't think this needs a hint. the source code is enough...
 
 Simply reverse the operations done to the input before it's checked.
 
-- xor the hardcoded value with the key
-- reverse
-- subtract 1 from each byte
-- enter the result as the password
+- Xor the hardcoded value with the key
+- Reverse
+- Subtract 1 from each byte
+- Enter the result as the password
+
+Below are intended solve scripts (First one is by Kolmus; second one is by Vipin)
 
 ```python
 value = "P8Va2Q04yV4SiW8l79fCg1i6"
@@ -39,6 +41,18 @@ for char in reversed:
     decremented.append(chr(ord(char) - 1))
 
 print("Password:", ''.join(decremented))
+```
+
+```py
+from pwn import xor
+s1 = b'P8Va2Q04yV4SiW8l79fCg1i6';s2 = b'dvdYRiiR66r6X3XXSj03QQXy'
+xored = xor(s1, s2) [::-1]
+final = bytearray()
+for x in xored:
+    final.append(x - 1)
+
+flag = f"csd{{{final.decode()}}}"
+print(flag)
 ```
 
 Flag: ```csd{N0_5oURc3_c0dE_NeX7_71M3}```

@@ -20,6 +20,8 @@ CTF, and the source code is available on GitHub.
 - [Round 3](rounds/3/README.md) (03/09/2024 - 04/01/2024)
 - [Round 4](rounds/4/README.md) (04/03/2024 - 05/01/2024)
 - [Round 5](rounds/5/README.md) (05/02/2024 - 07/22/2024)
+- [Round 6](rounds/6/README.md) (07/22/2024 - 08/31/2024)
+
 
 
 ## License

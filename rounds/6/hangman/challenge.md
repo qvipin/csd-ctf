@@ -40,8 +40,8 @@ int i = rand() % (sizeof(words) / sizeof(words[0]));
 
 This uses the current unix time (in seconds) as a seed for the random number generator. 2 possible ways to exploit this are:
 
-- connecting to the challenge twice within the same second. they will have the same seed -> you can fail one game on purpose to get the word and use it to beat the other one
-- writing a script that will use the same random number generator+seed and tell you the correct word before making the request (note that this requires a synchronized system with the same random number generator implementation)
+- Connecting to the challenge twice within the same second. they will have the same seed -> you can fail one game on purpose to get the word and use it to beat the other one
+- Writing a script that will use the same random number generator + seed and tells you the correct word before making the request (note that this requires a synchronized system with the same random number generator implementation)
 
 Flag: ```csd{G3TT1n6_tHE_HaN6_0F_1T}```
 

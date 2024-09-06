@@ -29,10 +29,10 @@ not getting enough accuracy with reverse image search? try looking for clues in 
 <summary>Reveal write-up</summary>
 
 - If you zoom into the top right corner you'll find the street name `CALLE CRISTO DE LA SENTENCIA`
-- searching for that on google maps, you'll find it to be located in cádiz, spain
-- the butchers shop on the street which is also in the picture gives you the exact location and viewing angle
-- going there on street view and turning around the camera, you'll find a store named `supermercado el jamón`
-- `el jamòn` means ham in english
+- Searching for that on Google maps, you'll find it to be located in Cádiz, Spain
+- The butchers shop on the street which is also in the picture gives you the exact location and viewing angle
+- Going there on street view and turning around the camera, you'll find a store named `Supermercado El Jamón`
+- `El Jamòn` means ham in english
 
 ![1](./1.png)
 

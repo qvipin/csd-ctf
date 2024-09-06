@@ -29,6 +29,8 @@ I wonder what would happen if somebody were to xor all these random strings toge
 
 Xor all the lines together to get the flag.
 
+Example solve script below:
+
 ```python
 from pwn import *
 

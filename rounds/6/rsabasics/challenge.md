@@ -13,10 +13,24 @@ A classic RSA challenge. Decrypt the cipher to get the flag.
 
 ## Hint
 
-Due to a lack of solves, this hint was later added:
+<details>
+<summary>Reveal hint</summary>
+
+the flag has 34 characters.
+[https://en.wikipedia.org/wiki/RSA_(cryptosystem)](https://en.wikipedia.org/wiki/RSA_(cryptosystem))
+
+python code that was used to encrypt the flag:
+
+```python
+flag = b'csd{this_is_not_the_real_flag}'
+m = int.from_bytes(flag, 'little')
+cipher = base64.b64encode(pow(m, e, n).to_bytes(256, 'little'))
+```
+
+#### Later in the round this hint was added due to lack of solutions:
 
 This line of python code was used in the process of encrypting the flag
-```python
+```py
 cipher = base64.b64encode(pow(m, e, n).to_bytes(256, 'little'))
 ```
 
@@ -32,30 +46,11 @@ In Python 3.2+, use the native method instead:
 int.from_bytes(s, 'big')
 For instance:
 
-```python
->>> int.from_bytes(b'P', 'big')
-80
-```
+> int.from_bytes(b'P', 'big')
+> 80
+> This is (essentially) the inverse of long_to_bytes().
 
-This is (essentially) the inverse of long_to_bytes().
-
-(Note the difference in endianess here compared to what is used for the cipher.)
-
-The regular hint costed 10 points.
-
-<details>
-<summary>Reveal hint</summary>
-
-the flag has 34 characters.
-[https://en.wikipedia.org/wiki/RSA_(cryptosystem)](https://en.wikipedia.org/wiki/RSA_(cryptosystem))
-
-python code that was used to encrypt the flag:
-
-```python
-flag = b'csd{this_is_not_the_real_flag}'
-m = int.from_bytes(flag, 'little')
-cipher = base64.b64encode(pow(m, e, n).to_bytes(256, 'little'))
-```
+-# (Note the difference in endianess here compared to what is used for the cipher.)
 
 </details>
 
@@ -64,11 +59,13 @@ cipher = base64.b64encode(pow(m, e, n).to_bytes(256, 'little'))
 <details>
 <summary>Reveal write-up</summary>
 
-this is standard key generation starting from 2 primes
+This is standard key generation starting from 2 primes.
 
-- compute private key d using the modular inverse
-- decode the b64 encoded ciphertext -> int
-- compute the message
+- Compute private key ***d*** using the modular inverse
+- Decode the Base64 encoded ciphertext -> Int
+- Compute the message
+
+Intended solve script:
 
 ```python
 import base64

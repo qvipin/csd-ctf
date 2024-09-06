@@ -28,11 +28,11 @@ still stuck? the challenge takes 8 bytes of input, does one operation on them, a
 <details>
 <summary>Reveal write-up</summary>
 
-Here is binary ninja's decompilation of the program:
+Here is Binary Ninja's decompilation of the program:
 
 ![1](1.jpg)
 
-We can see that the program takes 8 bytes of input, and then xors them with the value `0x3531563445455746`. After that it compares the result to the string "password" in a loop (byte per byte) until it reaches the end of the string (a null byte) or finds a mismatch. In order to get the correct input, we need to xor the string "password" with the value `0x3531563445455746`. Of course, strings are stored in little endian, so keep that in mind when doing the xor operation.
+We can see that the program takes 8 bytes of input, and then Xors them with the value `0x3531563445455746`. After that it compares the result to the string "password" in a loop (byte per byte) until it reaches the end of the string (a null byte) or finds a mismatch. In order to get the correct input, we need to Xor the string "password" with the value `0x3531563445455746`. Of course, strings are stored in little endian, so keep that in mind when doing the xor operation.
 
 ```python
 value = 0x3531563445455746
